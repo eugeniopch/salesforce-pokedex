@@ -1,0 +1,32 @@
+<template>
+    <template if:true={pokemons.data}>
+        <!-- Buscador -->
+        <div class="search">
+            <input
+                type="text"
+                placeholder="Search Pokémon..."
+                oninput={handleSearch}
+            />
+        </div>
+
+        <!-- Grid -->
+        <div class="grid">
+            <template for:each={filteredPokemons} for:item="p">
+                <div key={p.Id} class="card" data-type={p.Primary_Type__c}>
+                    <img src={p.Sprite_URL__c} alt={p.Name} />
+                    <h2>{p.Number__c} - {p.Name}</h2>
+                    <p>
+                        {p.Primary_Type__c}
+                        <template if:true={p.Secondary_Type__c}>
+                            / {p.Secondary_Type__c}
+                        </template>
+                    </p>
+                </div>
+            </template>
+        </div>
+    </template>
+
+    <template if:true={pokemons.error}>
+        <p>Error loading Pokémon</p>
+    </template>
+</template>

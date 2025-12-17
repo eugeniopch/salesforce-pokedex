@@ -1,0 +1,111 @@
+.search {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  width: 280px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.card h2 {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.card p {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.card[data-type="Grass"] {
+  background-color: #78c850;
+}
+
+.card[data-type="Fire"] {
+  background-color: #f08030;
+}
+
+.card[data-type="Water"] {
+  background-color: #6890f0;
+}
+
+.card[data-type="Electric"] {
+  background-color: #f8d030;
+  color: #000;
+}
+
+.card[data-type="Poison"] {
+  background-color: #a040a0;
+}
+
+.card[data-type="Normal"] {
+  background-color: #a8a878;
+}
+
+.card[data-type="Bug"] {
+  background-color: #a8b820;
+}
+
+.card[data-type="Psychic"] {
+  background-color: #f85888;
+}
+
+.card[data-type="Ice"] {
+  background-color: #98d8d8;
+  color: #000;
+}
+
+.card[data-type="Dragon"] {
+  background-color: #7038f8;
+}
+
+.card[data-type="Ground"] {
+  background-color: #e0c068;
+  color: #000;
+}
+
+.card[data-type="Rock"] {
+  background-color: #b8a038;
+}
+
+.card[data-type="Fighting"] {
+  background-color: #c03028;
+}
+
+.card[data-type="Ghost"] {
+  background-color: #705898;
+}
