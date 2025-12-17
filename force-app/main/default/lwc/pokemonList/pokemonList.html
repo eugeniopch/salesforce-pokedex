@@ -5,9 +5,26 @@
             <input
                 type="text"
                 placeholder="Search Pokémon..."
+                value={searchTerm}
                 oninput={handleSearch}
             />
+            <button
+                class="clear"
+                onclick={clearSearch}
+                if:true={searchTerm}
+            >
+                ✕
+            </button>
         </div>
+        <div class="filters">
+            <lightning-combobox
+                label="Filter by type"
+                value={selectedType}
+                options={typeOptions}
+                onchange={handleTypeChange}>
+            </lightning-combobox>
+        </div>
+
 
         <!-- Grid -->
         <div class="grid">

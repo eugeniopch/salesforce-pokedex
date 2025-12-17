@@ -1,16 +1,30 @@
 .search {
-  margin-bottom: 16px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 .search input {
-  width: 280px;
+  width: 240px;
   padding: 8px 12px;
   border-radius: 8px;
   border: none;
-  outline: none;
   font-size: 14px;
+}
+
+.search .clear {
+  background: none;
+  border: none;
+  color: #1e1e1e;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.filters {
+  margin-bottom: 16px;
+  max-width: 240px;
 }
 
 .grid {
