@@ -1,18 +1,28 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Pokédex (LWC + Apex)
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Personal project built with Salesforce Lightning Web Components and Apex.
 
-## How Do You Plan to Deploy Your Changes?
+## Features
+- Custom Pokémon object
+- Apex controller with cacheable SOQL
+- Lightning Web Component Pokédex
+- Dynamic grid layout
+- Search by Pokémon name
+- Type-based card styling
+- Data imported via CSV and external APIs
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Tech Stack
+- Salesforce Apex
+- Lightning Web Components (LWC)
+- Salesforce DX
+- GitHub
 
-## Configure Your Salesforce DX Project
+## Architecture
+- Frontend: LWC
+- Backend: Apex controller
+- Data: Custom Object (Pokemon__c)
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Notes
+This project was developed using Salesforce DX and VS Code.  
+The Salesforce org is used only as a runtime environment.
 
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
