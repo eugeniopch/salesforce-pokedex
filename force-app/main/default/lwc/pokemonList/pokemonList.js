@@ -5,7 +5,9 @@ import { getObjectInfo, getPicklistValues } from 'lightning/uiObjectInfoApi';
 import POKEMON_OBJECT from '@salesforce/schema/Pokemon__c';
 import PRIMARY_TYPE_FIELD from '@salesforce/schema/Pokemon__c.Primary_Type__c';
 
-export default class PokemonList extends LightningElement {
+import { NavigationMixin } from 'lightning/navigation';
+
+export default class PokemonList extends NavigationMixin(LightningElement) {
 
     // =========================
     // Estado del componente
@@ -51,6 +53,19 @@ export default class PokemonList extends LightningElement {
 
     handleTypeChange(event) {
         this.selectedType = event.detail.value;
+    }
+
+    handleCardClick(event) {
+        const recordId = event.currentTarget.dataset.id;
+
+        this[NavigationMixin.Navigate]({
+            type: 'standard__recordPage',
+            attributes: {
+                recordId: recordId,
+                objectApiName: 'Pokemon__c',
+                actionName: 'view'
+            }
+        });
     }
 
     // =========================

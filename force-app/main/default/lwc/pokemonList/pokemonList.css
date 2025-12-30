@@ -123,3 +123,13 @@
 .card[data-type="Ghost"] {
   background-color: #705898;
 }
+
+.card.clickable {
+  cursor: pointer;
+}
+
+.card.clickable:hover {
+  outline: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+

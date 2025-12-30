@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px;
+}
+
+.sprite {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.info h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.types {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-top: 4px;
+}

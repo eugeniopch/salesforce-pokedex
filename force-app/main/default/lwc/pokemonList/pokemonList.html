@@ -29,7 +29,12 @@
         <!-- Grid -->
         <div class="grid">
             <template for:each={filteredPokemons} for:item="p">
-                <div key={p.Id} class="card" data-type={p.Primary_Type__c}>
+                <div
+                    key={p.Id}
+                    class="card clickable"
+                    data-id={p.Id}
+                    data-type={p.Primary_Type__c}
+                    onclick={handleCardClick}>
                     <img src={p.Sprite_URL__c} alt={p.Name} />
                     <h2>{p.Number__c} - {p.Name}</h2>
                     <p>
