@@ -37,7 +37,7 @@ export default class PokemonList extends NavigationMixin(LightningElement) {
     })
     typePicklist;
 
-    @wire(getExternalPokemon, { offset: 150, limitSize: 50 })
+    @wire(getExternalPokemon, { offset: 151, limitSize: 10 })
     externalPokemons;
 
 

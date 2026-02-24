@@ -53,21 +53,20 @@
     </template>
 
     <template if:true={externalPokemons.data}>
-    <h2 class="sectionTitle">More Pokémon (from PokeAPI)</h2>
+        <h2 class="sectionTitle">More Pokémon (from PokeAPI)</h2>
 
-    <div class="grid">
-        <template for:each={externalPokemons.data} for:item="p">
-            <div key={p.dexNumber} class="card">
-    <img src={p.spriteUrl} alt={p.name} />
-    <h2>{p.dexNumber} - {p.name}</h2>
-</div>
+        <div class="grid">
+            <template for:each={externalPokemons.data} for:item="p">
+                <div key={p.dexNumber} class="card" data-type={p.type}>
+                    <img src={p.spriteUrl} alt={p.name} />
+                    <h2>{p.dexNumber} - {p.name}</h2>
+                </div>
+            </template>
+        </div>
+    </template>
 
-        </template>
-    </div>
-</template>
-
-<template if:true={externalPokemons.error}>
-    <p>Error loading external Pokémon</p>
-</template>
+    <template if:true={externalPokemons.error}>
+        <p>Error: {externalPokemons.error.body.message}</p> 
+    </template>
 
 </template>
