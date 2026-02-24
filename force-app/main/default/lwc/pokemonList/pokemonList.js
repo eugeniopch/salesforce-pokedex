@@ -7,6 +7,9 @@ import PRIMARY_TYPE_FIELD from '@salesforce/schema/Pokemon__c.Primary_Type__c';
 
 import { NavigationMixin } from 'lightning/navigation';
 
+import getExternalPokemon from '@salesforce/apex/PokemonController.getExternalPokemon';
+
+
 export default class PokemonList extends NavigationMixin(LightningElement) {
 
     // =========================
@@ -33,6 +36,10 @@ export default class PokemonList extends NavigationMixin(LightningElement) {
         fieldApiName: PRIMARY_TYPE_FIELD
     })
     typePicklist;
+
+    @wire(getExternalPokemon, { offset: 150, limitSize: 50 })
+    externalPokemons;
+
 
     // =========================
     // Handlers UI
